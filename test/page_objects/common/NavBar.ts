@@ -16,4 +16,8 @@ class NavBar {
   async waitForCartBadge() {
     await browser.waitUntil(EC.presenceOf(this.shoppingCartBadge))
   }
+
+  async getCartBadgeNum(): Promise<string> {
+    return $(this.shoppingCartBadge).getText()
+  }
 }
