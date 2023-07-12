@@ -22,3 +22,5 @@ class InventoryPage {
     return $$(this.itemNames)[productIndex].getText()
   }
 }
+
+export default new InventoryPage()

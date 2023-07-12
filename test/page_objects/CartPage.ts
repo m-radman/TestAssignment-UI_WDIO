@@ -22,3 +22,5 @@ class CartPage {
     await $(this.checkoutBtn).click()
   }
 }
+
+export default new CartPage()

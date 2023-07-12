@@ -21,3 +21,5 @@ class NavBar {
     return $(this.shoppingCartBadge).getText()
   }
 }
+
+export default new NavBar()

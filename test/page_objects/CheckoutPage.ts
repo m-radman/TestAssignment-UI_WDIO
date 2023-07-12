@@ -49,3 +49,5 @@ class CheckoutPage {
     return $(this.checkoutCompleteMsg).isDisplayed()
   }
 }
+
+export default new CheckoutPage()

@@ -28,3 +28,5 @@ class IndexPage {
     await $(this.loginButton).click()
   }
 }
+
+export default new IndexPage()

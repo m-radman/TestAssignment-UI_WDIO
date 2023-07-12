@@ -10,3 +10,5 @@ class ProductContainer {
     await $(this.addToCartBtn).click()
   }
 }
+
+export default new ProductContainer()
