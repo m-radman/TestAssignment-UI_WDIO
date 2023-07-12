@@ -2,6 +2,7 @@
   "name": "my-new-project",
   "type": "module",
   "devDependencies": {
+    "@faker-js/faker": "^8.0.2",
     "@types/jasmine": "^4.3.5",
     "@wdio/cli": "^8.12.2",
     "@wdio/jasmine-framework": "^8.12.1",
