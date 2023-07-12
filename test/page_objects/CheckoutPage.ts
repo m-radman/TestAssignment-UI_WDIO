@@ -10,9 +10,9 @@ class CheckoutPage {
 
   constructor() {
     this.firstNameInputField = "#first-name"
-    this.lastNameInputField = "last-name"
-    this.zipCodeInputField = "postal-code"
-    this.continueBtn = "#conitnue"
+    this.lastNameInputField = "#last-name"
+    this.zipCodeInputField = "#postal-code"
+    this.continueBtn = "#continue"
     this.finishBtn = "#finish"
     this.checkoutCompleteMsg = "#checkout_complete_container"
   }
@@ -25,7 +25,7 @@ class CheckoutPage {
     await $(this.lastNameInputField).setValue(lname)
   }
 
-  async enterZipCode(zip: number) {
+  async enterZipCode(zip: string) {
     await $(this.zipCodeInputField).setValue(zip)
   }
 
