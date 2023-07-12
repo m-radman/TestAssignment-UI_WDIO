@@ -10,7 +10,7 @@ class InventoryPage {
     this.itemNames = ".inventory_item_label .inventory_item_name"
   }
 
-  async addProduct(productIndex: number) {
+  async AddProductToCart(productIndex: number) {
     await $$(this.addToCartBtns)[productIndex].click()
   }
 

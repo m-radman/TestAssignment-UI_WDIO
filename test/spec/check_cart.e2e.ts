@@ -3,6 +3,13 @@ import InventoryPage from "../page_objects/InventoryPage.js";
 import CartPage from "../page_objects/CartPage.js";
 import ProductContainer from "../page_objects/common/ProductContainer.js";
 import NavBar from "../page_objects/common/NavBar.js";
+import { loginUser } from "../utils/login.js";
+
+const BACKPACK = 2
+const T_SHIRT = 0
+
+const FIRST_ITEM_IN_CART = 0
+const SECOND_ITEM_IN_CART = 1
 
 describe("Add to Cart functionality tests", () => {
   beforeAll(() => {
@@ -12,20 +19,22 @@ describe("Add to Cart functionality tests", () => {
   it("should display correct items in the cart", async () => {
     await IndexPage.open()
 
-    await IndexPage.enterUsername("standard_user")
-    await IndexPage.enterPassword("secret_sauce")
-    await IndexPage.loginUser()
+    await loginUser()
 
-    const firstItemName = await InventoryPage.getProductName(2)
-    await InventoryPage.addProduct(2)
+    //Add product to shopping cart from Inventory page
+    const firstItemName = await InventoryPage.getProductName(BACKPACK)
+    await InventoryPage.AddProductToCart(BACKPACK)
     
-    const secondItemName = await InventoryPage.getProductName(0)
-    await InventoryPage.goToProductPage(0)
+    //Add product to shopping cart from Product page
+    const secondItemName = await InventoryPage.getProductName(T_SHIRT)
+    await InventoryPage.goToProductPage(T_SHIRT)
     await ProductContainer.addProductToCart()
 
     await NavBar.goToCart()
 
-    expect(firstItemName).toEqual(await CartPage.getItemName(0))
-    expect(secondItemName).toEqual(await CartPage.getItemName(1))
+    //Compare names of items from the cart with names of added items
+    expect(await CartPage.getItemName(FIRST_ITEM_IN_CART)).toEqual(firstItemName)
+    expect(await CartPage.getItemName(SECOND_ITEM_IN_CART)).toEqual(secondItemName)
+    expect(await NavBar.getCartBadgeNum()).toEqual("2")
   })
 })
