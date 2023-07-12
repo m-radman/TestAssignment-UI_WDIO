@@ -30,9 +30,7 @@ export const config: Options.Testrunner = {
     // then the current working directory is where your `package.json` resides, so `wdio`
     // will be called from there.
     //
-    specs: [
-        // ToDo: define location for spec files here
-    ],
+    specs: ["./test/spec/**/*.ts"],
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
@@ -132,7 +130,7 @@ export const config: Options.Testrunner = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec', "html-nice"],
+    reporters: ['spec'], // [milosr][todo] add "html-nice"
 
     
     //

@@ -1,4 +1,3 @@
-
 class IndexPage {
   static url: string = "https://www.saucedemo.com/"
 

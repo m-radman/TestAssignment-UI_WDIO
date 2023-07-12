@@ -5,8 +5,8 @@ class NavBar {
   private shoppingCartBadge: string
 
   constructor() {
-    this.shoppingCartLink = "#shopping-cart-container>a"
-    this.shoppingCartBadge = "#shopping-cart-container span"
+    this.shoppingCartLink = "#shopping_cart_container>a"
+    this.shoppingCartBadge = "#shopping_cart_container span"
   }
 
   async goToCart() {
@@ -14,7 +14,7 @@ class NavBar {
   }
 
   async waitForCartBadge() {
-    await browser.waitUntil(EC.presenceOf(this.shoppingCartBadge))
+    await browser.waitUntil(EC.visibilityOf(this.shoppingCartBadge))
   }
 
   async getCartBadgeNum(): Promise<string> {
