@@ -19,6 +19,10 @@
     "wdio-wait-for": "^3.0.5"
   },
   "scripts": {
-    "wdio": "wdio run ./wdio.conf.ts"
+    "wdio": "wdio run ./wdio.conf.ts",
+    "cart-badge": "wdio run ./wdio.conf.ts --spec test/spec/cart_badge.e2e.ts",
+    "check-cart": "wdio run ./wdio.conf.ts --spec test/spec/check_cart.e2e.ts",
+    "remove-item": "wdio run ./wdio.conf.ts --spec test/spec/remove_from_cart.e2e.ts",
+    "checkout": "wdio run ./wdio.conf.ts --spec test/spec/order_checkout.e2e.ts"
   }
 }
