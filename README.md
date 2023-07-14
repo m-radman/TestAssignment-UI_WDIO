@@ -18,7 +18,7 @@ Steps to follow are:
 - Complete the order
 - Verify that the order is completed successfully with the displayed message
 
-I completed this task using WebDriverIO automation framework. Also, here is my take on this task using Cypress automation framework [link].
+I completed this task using WebDriverIO automation framework. Also, here is my take on this task using Cypress [link].
 
 ---
 
