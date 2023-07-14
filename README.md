@@ -37,8 +37,8 @@ For running tests you need to take next steps:
 1. Clone this repository to your local machine.
 2. Install dependencies using `npm install`
 3. Run tests using these commands:
-   - To run all tests use `npm run wdio`
-   - To run the cart badge update test use `npm run cart-badge`
-   - To run the test for presence of correct items in the cart use `npm run check-cart`
-   - To run the test for presence of right item in the cart after removing one item use `npm run remove-item`
-   - To run the successful order completion test use `npm run checkout`
+   - To run all tests `npm run wdio`
+   - To run the cart badge update test `npm run cart-badge`
+   - To run the test for presence of correct items in the cart `npm run check-cart`
+   - To run the test for presence of right item in the cart after removing one item `npm run remove-item`
+   - To run the successful order completion test `npm run checkout`
