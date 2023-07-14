@@ -9,6 +9,9 @@ import NavBar from "../page_objects/common/NavBar.js";
 
 import { loginUser } from "../utils/login.js";
 
+const USERNAME = "standard_user"
+const PASSWORD = "secret_sauce"
+
 const BACKPACK = 2
 const T_SHIRT = 0
 
@@ -22,7 +25,7 @@ describe("Checkout functionality tests", () => {
   it("should complete order successfully", async () => {
     await IndexPage.open()
 
-    await loginUser()
+    await loginUser(USERNAME, PASSWORD)
 
     //Add items to the cart
     await InventoryPage.AddProductToCart(BACKPACK)    

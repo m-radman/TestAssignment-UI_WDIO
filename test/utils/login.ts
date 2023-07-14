@@ -1,8 +1,8 @@
 import IndexPage  from "../page_objects/IndexPage.js";
 
-export async function loginUser() {
-  await IndexPage.enterUsername("standard_user")
-  await IndexPage.enterPassword("secret_sauce")
+export async function loginUser(username, password) {
+  await IndexPage.enterUsername(username)
+  await IndexPage.enterPassword(password)
   await IndexPage.loginUser()
 }
 

@@ -5,6 +5,9 @@ import ProductContainer from "../page_objects/common/ProductContainer.js";
 import NavBar from "../page_objects/common/NavBar.js";
 import { loginUser } from "../utils/login.js";
 
+const USERNAME = "standard_user"
+const PASSWORD = "secret_sauce"
+
 const BACKPACK = 2
 const T_SHIRT = 0
 
@@ -19,7 +22,7 @@ describe("Add to Cart functionality tests", () => {
   it("should display correct items in the cart", async () => {
     await IndexPage.open()
 
-    await loginUser()
+    await loginUser(USERNAME, PASSWORD)
 
     //Add product to shopping cart from Inventory page
     const firstItemName = await InventoryPage.getProductName(BACKPACK)

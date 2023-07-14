@@ -3,6 +3,9 @@ import InventoryPage from "../page_objects/InventoryPage.js";
 import NavBar from "../page_objects/common/NavBar.js";
 import { loginUser } from "../utils/login.js";
 
+const USERNAME = "standard_user"
+const PASSWORD = "secret_sauce"
+
 const BACKPACK = 2
 
 describe("Cart Icon functionality tests", () => {
@@ -13,7 +16,7 @@ describe("Cart Icon functionality tests", () => {
   it("should update cart badge correctly", async () => {
     await IndexPage.open()
 
-    await loginUser()
+    await loginUser(USERNAME, PASSWORD)
 
     await InventoryPage.AddProductToCart(BACKPACK)
     await NavBar.waitForCartBadge()
