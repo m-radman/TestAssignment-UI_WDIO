@@ -1,7 +1,7 @@
 # Automation assignment UI testing task
 
-Main objective of this task is to write e2e automation tests for the https://www.saucedemo.com/.  
-Steps to follow are:
+The main objective of this task is to write e2e automation tests for https://www.saucedemo.com/.  
+The steps to follow are:
 
 - Go to https://www.saucedemo.com/
 - Log in to the site
@@ -18,8 +18,8 @@ Steps to follow are:
 - Complete the order
 - Verify that the order is completed successfully with the displayed message
 
-I completed this task using WebDriverIO automation framework.  
-Also, here is my take on this task using Cypress [link].
+I completed this task using the WebDriverIO automation framework.  
+Also, here is my take on this task using [Cypress](https://github.com/m-radman/TestAssignment-UI_Cypress/tree/master).
 
 ---
 
